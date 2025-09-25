@@ -176,8 +176,11 @@ export default function ProjectShowcase() {
               <p className="text-xs sm:text-sm text-zinc-300 mb-3 sm:mb-4 px-2">
                 Explore our complete portfolio of innovative projects and solutions.
               </p>
-              <div className="px-3 sm:px-4 py-2 rounded-full border border-white/30 bg-white/10 text-xs sm:text-sm text-white hover:bg-white/20 transition-colors">
+              <div className="px-3 sm:px-4 py-2 rounded-full border border-white/30 bg-white/10 text-xs sm:text-sm text-white hover:bg-white/20 transition-colors relative group/button">
                 View All Projects
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black/90 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                  Coming Soon
+                </div>
               </div>
             </motion.div>
           </div>
