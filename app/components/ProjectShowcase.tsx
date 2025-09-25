@@ -10,8 +10,7 @@ import {
   Bot, 
   Brain, 
   Briefcase,
-  Sparkles,
-  Rocket
+  Plus
 } from "lucide-react";
 
 type Project = {
@@ -113,14 +112,10 @@ export default function ProjectShowcase() {
                   whileHover={{ y: -8, scale: 1.02 }}
                   className="relative bg-black/50 border border-white/15 backdrop-blur-xl hover:bg-black/70 transition-all duration-500 ease-out shadow-2xl rounded-3xl p-4 sm:p-6 group cursor-pointer flex-shrink-0 w-72 sm:w-80 md:w-96"
                 >
-                  {/* Project Number Badge */}
-                  <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center border border-white/20">
-                    <span className="text-white font-bold text-sm">{String(i + 1).padStart(2, '0')}</span>
-                  </div>
 
                   {/* Icon Section */}
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br ${currentGradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-white/10 border border-white/20 shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <CurrentIcon className="h-8 w-8 text-white" strokeWidth={2} />
                     </div>
                     <div>
@@ -172,8 +167,8 @@ export default function ProjectShowcase() {
               whileHover={{ y: -8, scale: 1.02 }}
               className="relative bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-xl hover:from-white/15 hover:to-white/10 transition-all duration-500 ease-out shadow-2xl rounded-3xl p-4 sm:p-6 cursor-pointer flex-shrink-0 w-72 sm:w-80 md:w-96 flex flex-col items-center justify-center text-center group"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Sparkles className="h-8 w-8 text-white" strokeWidth={2} />
+              <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Plus className="h-8 w-8 text-white" strokeWidth={2} />
               </div>
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3">
                 And many more!
@@ -198,16 +193,6 @@ export default function ProjectShowcase() {
         </div>
       </div>
 
-      {/* Bottom CTA Section */}
-      <div className="relative z-10 py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-2 sm:gap-3 rounded-full border border-white/20 bg-white/5 px-4 sm:px-8 py-3 sm:py-4 backdrop-blur-sm hover:bg-white/10 transition-colors">
-            <Sparkles className="h-5 sm:h-7 w-5 sm:w-7 text-yellow-400" />
-            <span className="text-base sm:text-xl font-semibold text-white">And many more exciting projects!</span>
-            <Rocket className="h-5 sm:h-7 w-5 sm:w-7 text-blue-400" />
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
